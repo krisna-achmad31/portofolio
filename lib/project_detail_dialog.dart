@@ -14,7 +14,7 @@ class ProjectDetailDialog extends StatelessWidget {
     showDialog(
       context: context,
       barrierDismissible: true,
-      barrierColor: Colors.black.withValues(alpha: 0.85),
+      barrierColor: Colors.black.withOpacity(0.85),
       builder: (_) => ProjectDetailDialog(project: project),
     );
   }
@@ -42,7 +42,7 @@ class ProjectDetailDialog extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppTheme.bgCard,
               border: Border.all(
-                color: project.gradient[0].withValues(alpha: 0.3),
+                color: project.gradient[0].withOpacity(0.3),
                 width: 1,
               ),
             ),
@@ -133,7 +133,7 @@ class ProjectDetailDialog extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
           decoration: BoxDecoration(
-            color: project.gradient[0].withValues(alpha: 0.15),
+            color: project.gradient[0].withOpacity(0.15),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
@@ -215,8 +215,8 @@ class _VisualShowcase extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            project.gradient[0].withValues(alpha: 0.85),
-            project.gradient[1].withValues(alpha: 0.95),
+            project.gradient[0].withOpacity(0.85),
+            project.gradient[1].withOpacity(0.95),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -310,7 +310,7 @@ class _PhoneFrame extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.5),
+            color: Colors.black.withOpacity(0.5),
             blurRadius: 30,
             offset: const Offset(0, 12),
           ),
@@ -360,8 +360,8 @@ class _PhoneFrame extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            project.gradient[0].withValues(alpha: 0.4),
-            project.gradient[1].withValues(alpha: 0.7),
+            project.gradient[0].withOpacity(0.4),
+            project.gradient[1].withOpacity(0.7),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -373,7 +373,7 @@ class _PhoneFrame extends StatelessWidget {
           children: [
             Icon(
               project.icon,
-              color: Colors.white.withValues(alpha: 0.9),
+              color: Colors.white.withOpacity(0.9),
               size: 64,
             ),
             const SizedBox(height: 12),
@@ -416,7 +416,7 @@ class _CircuitPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white.withValues(alpha: 0.08)
+      ..color = Colors.white.withOpacity(0.08)
       ..strokeWidth = 1
       ..style = PaintingStyle.stroke;
 
@@ -436,7 +436,7 @@ class _CircuitPainter extends CustomPainter {
     }
 
     // Decorative dots
-    final dotPaint = Paint()..color = Colors.white.withValues(alpha: 0.15);
+    final dotPaint = Paint()..color = Colors.white.withOpacity(0.15);
     for (int i = 0; i < 12; i++) {
       canvas.drawCircle(
         Offset(
@@ -470,7 +470,7 @@ class _KeyImpactCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppTheme.bgElevated.withValues(alpha: 0.6),
+        color: AppTheme.bgElevated.withOpacity(0.6),
         borderRadius: BorderRadius.circular(12),
         border: Border(
           left: BorderSide(color: accentColor, width: 3),
@@ -546,10 +546,10 @@ class _TechChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
+        color: color.withOpacity(0.1),
         borderRadius: BorderRadius.circular(6),
         border: Border.all(
-          color: color.withValues(alpha: 0.25),
+          color: color.withOpacity(0.25),
           width: 0.5,
         ),
       ),
@@ -594,11 +594,11 @@ class _CloseButtonState extends State<_CloseButton> {
           decoration: BoxDecoration(
             color: _hovering
                 ? AppTheme.bgElevated
-                : AppTheme.bgCard.withValues(alpha: 0.7),
+                : AppTheme.bgCard.withOpacity(0.7),
             shape: BoxShape.circle,
             border: Border.all(
               color: _hovering
-                  ? AppTheme.accentBlue.withValues(alpha: 0.5)
+                  ? AppTheme.accentBlue.withOpacity(0.5)
                   : AppTheme.borderColor,
             ),
           ),

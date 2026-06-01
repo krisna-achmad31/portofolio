@@ -94,7 +94,7 @@ class _BackgroundDecoration extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  AppTheme.accentBlue.withValues(alpha: 0.15),
+                  AppTheme.accentBlue.withOpacity(0.15),
                   Colors.transparent,
                 ],
               ),
@@ -111,7 +111,7 @@ class _BackgroundDecoration extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  AppTheme.accentPurple.withValues(alpha: 0.12),
+                  AppTheme.accentPurple.withOpacity(0.12),
                   Colors.transparent,
                 ],
               ),
@@ -148,10 +148,10 @@ class _NavBar extends StatelessWidget {
         vertical: 20,
       ),
       decoration: BoxDecoration(
-        color: AppTheme.bgDark.withValues(alpha: 0.7),
+        color: AppTheme.bgDark.withOpacity(0.7),
         border: Border(
           bottom: BorderSide(
-            color: AppTheme.borderColor.withValues(alpha: 0.3),
+            color: AppTheme.borderColor.withOpacity(0.3),
             width: 1,
           ),
         ),
@@ -322,10 +322,10 @@ class _HeroSection extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             decoration: BoxDecoration(
-              color: const Color(0xFF1A4D2E).withValues(alpha: 0.3),
+              color: const Color(0xFF1A4D2E).withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: const Color(0xFF4ADB7B).withValues(alpha: 0.4),
+                color: const Color(0xFF4ADB7B).withOpacity(0.4),
               ),
             ),
             child: Row(
@@ -502,10 +502,10 @@ class _AboutSection extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: AppTheme.bgCard.withValues(alpha: 0.6),
+                    color: AppTheme.bgCard.withOpacity(0.6),
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: AppTheme.borderColor.withValues(alpha: 0.4),
+                      color: AppTheme.borderColor.withOpacity(0.4),
                     ),
                   ),
                   child: Column(
@@ -646,7 +646,7 @@ class _FeaturedProjectCardState extends State<_FeaturedProjectCard> {
             color: AppTheme.bgCard,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: _hovering ? widget.project.gradient[0].withValues(alpha: 0.5) : AppTheme.borderColor.withValues(alpha: 0.4),
+              color: _hovering ? widget.project.gradient[0].withOpacity(0.5) : AppTheme.borderColor.withOpacity(0.4),
               width: 1.5,
             ),
           ),
@@ -725,7 +725,7 @@ class _FeaturedProjectCardState extends State<_FeaturedProjectCard> {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
-                              color: widget.project.gradient[0].withValues(alpha: 0.15),
+                              color: widget.project.gradient[0].withOpacity(0.15),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Text(
@@ -853,7 +853,7 @@ class _ProjectCardState extends State<_ProjectCard> {
             color: AppTheme.bgCard,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: _hovering ? widget.project.gradient[0].withValues(alpha: 0.5) : AppTheme.borderColor.withValues(alpha: 0.4),
+              color: _hovering ? widget.project.gradient[0].withOpacity(0.5) : AppTheme.borderColor.withOpacity(0.4),
             ),
           ),
           padding: const EdgeInsets.all(24),
@@ -879,7 +879,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                     child: Container(
                       padding: const EdgeInsets.all(6),
                       decoration: BoxDecoration(
-                        color: widget.project.gradient[0].withValues(alpha: 0.15),
+                        color: widget.project.gradient[0].withOpacity(0.15),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
@@ -969,7 +969,7 @@ class _TechChip extends StatelessWidget {
         color: AppTheme.bgElevated,
         borderRadius: BorderRadius.circular(6),
         border: Border.all(
-          color: AppTheme.borderColor.withValues(alpha: 0.5),
+          color: AppTheme.borderColor.withOpacity(0.5),
         ),
       ),
       child: Text(
@@ -1030,7 +1030,7 @@ class _SkillsSection extends StatelessWidget {
                   color: AppTheme.bgCard,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: AppTheme.borderColor.withValues(alpha: 0.4),
+                    color: AppTheme.borderColor.withOpacity(0.4),
                   ),
                 ),
                 child: Column(
@@ -1081,15 +1081,15 @@ class _ContactSection extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              AppTheme.accentBlue.withValues(alpha: 0.15),
-              AppTheme.accentPurple.withValues(alpha: 0.15),
+              AppTheme.accentBlue.withOpacity(0.15),
+              AppTheme.accentPurple.withOpacity(0.15),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
-            color: AppTheme.accentBlue.withValues(alpha: 0.3),
+            color: AppTheme.accentBlue.withOpacity(0.3),
           ),
         ),
         child: Column(
@@ -1181,10 +1181,10 @@ class _ContactButtonState extends State<_ContactButton> {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           decoration: BoxDecoration(
-            color: _hovering ? AppTheme.bgElevated : AppTheme.bgCard.withValues(alpha: 0.7),
+            color: _hovering ? AppTheme.bgElevated : AppTheme.bgCard.withOpacity(0.7),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: _hovering ? AppTheme.accentBlue.withValues(alpha: 0.6) : AppTheme.borderColor.withValues(alpha: 0.5),
+              color: _hovering ? AppTheme.accentBlue.withOpacity(0.6) : AppTheme.borderColor.withOpacity(0.5),
             ),
           ),
           child: Row(
@@ -1236,7 +1236,7 @@ class _Footer extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         border: Border(
-          top: BorderSide(color: AppTheme.borderColor.withValues(alpha: 0.4)),
+          top: BorderSide(color: AppTheme.borderColor.withOpacity(0.4)),
         ),
       ),
       child: Row(
@@ -1335,7 +1335,7 @@ class _PrimaryButtonState extends State<_PrimaryButton> {
             boxShadow: _hovering
                 ? [
                     BoxShadow(
-                      color: AppTheme.accentBlue.withValues(alpha: 0.4),
+                      color: AppTheme.accentBlue.withOpacity(0.4),
                       blurRadius: 20,
                       offset: const Offset(0, 6),
                     ),
