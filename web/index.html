@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Achmad Yukrisna — Mobile Engineer with 5+ years building Flutter, Kotlin, and Swift apps bridging hardware (BLE, RFID, POS, IoT) and scalable software. Open to remote roles SG/AU/JP/US.">
+  <meta name="keywords" content="Mobile Engineer, Flutter Developer, Android Kotlin, iOS Swift, BLE, RFID, IoT, Hardware Integration, Indonesia, Remote">
+  <meta name="author" content="Achmad Yukrisna A">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Achmad Yukrisna · Mobile Engineer Portfolio">
+  <meta property="og:description" content="Mobile apps that talk to hardware. Flutter + Native + Industrial RFID/BLE/POS/IoT integration specialist.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Achmad Yukrisna · Mobile Engineer">
+  <meta name="twitter:description" content="Mobile apps that talk to hardware. Flutter + Native + BLE/RFID/POS/IoT.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="A. Yukrisna">
+
+  <!-- Favicon -->
+  <link rel="manifest" href="manifest.json">
+
+  <title>Achmad Yukrisna · Mobile Engineer Portfolio</title>
+
+  <style>
+    body {
+      background-color: #0A1628;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+    #loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0A1628;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(74, 158, 255, 0.2);
+      border-top-color: #4A9EFF;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text {
+      margin-top: 24px;
+      color: #6B7B92;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">LOADING PORTFOLIO</div>
+  </div>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loading = document.getElementById('loading');
+      if (loading) {
+        loading.style.opacity = 0;
+        setTimeout(function() { loading.remove(); }, 500);
+      }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
