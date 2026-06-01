@@ -33,7 +33,7 @@ jobs:
       - name: Build Flutter Web
         # IMPORTANT: change "portfolio" below to your actual repo name
         # If your repo is "username.github.io" (user site), use --base-href "/"
-        run: flutter build web --release --base-href "/portfolio/"
+        run: flutter build web --release --base-href "/portofolio/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
